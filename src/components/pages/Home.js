@@ -3,7 +3,7 @@ import "../styles/Home.css";
 
 function Home() {
     return (
-        <div className="container">
+        <div className="container home">
             <h1 className="right-align">SEEFOOD</h1>
             <div className="btnbox">
                 <p className="center-align">Start your experience by clicking on the AR or QR button</p>
