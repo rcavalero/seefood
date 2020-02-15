@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-extend BrandRec from Component{
+extend BrandRecPage from Component{
 
 
 
@@ -13,4 +13,4 @@ extend BrandRec from Component{
 
 
 
-export default BrandRec;
+export default BrandRecPage;
