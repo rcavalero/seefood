@@ -24,7 +24,7 @@ class Update extends Component {
                     <label>Select Ingredient</label>
                 </div>
             </div> 
-            </div>
+        </div>
         )
     }
 }

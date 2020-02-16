@@ -30,7 +30,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-            <ul class="sidenav" id="mobile-demo">
+            <ul className="sidenav" id="mobile-demo">
                 <li><Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
                     Home
                         </Link></li>
