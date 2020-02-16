@@ -1,17 +1,13 @@
 import React from "react";
 import BrandCard from "../BrandCard"
 
-function BrandRec () {
+function BrandRec() {
     return (
-<div>
-    <BrandCard />
-</div>
-
-
-
-    )}
-
-
+        <div className="advertisment">
+            <BrandCard />
+        </div>
+    )
+}
 
 
 
