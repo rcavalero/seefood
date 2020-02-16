@@ -23,6 +23,11 @@ function Navbar() {
                             Manage Ingredients
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link"}>
+                            Brand Recommendation
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <ul class="sidenav" id="mobile-demo">

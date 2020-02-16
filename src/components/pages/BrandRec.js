@@ -1,16 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import BrandCard from "../BrandCard"
 
-
-extend BrandRecPage from Component{
-
-
-
-
-
+function BrandRec() {
+    return (
+        <div className="advertisment">
+            <BrandCard />
+        </div>
+    )
 }
 
 
 
-
-
-export default BrandRecPage;
+export default BrandRec;
