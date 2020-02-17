@@ -6,6 +6,9 @@ const API = {
     getIngredients: ()=>{
         return axios.get(`${URL}/api/ingredients`)
     },
+    getOneIngredient: (id)=>{
+        return axios.get(`${URL}/api/ingredients/${id}`)
+    },
     addIngredient: (newIngredient)=>{
         return axios.post(`${URL}/api/ingredients`,newIngredient);
     },

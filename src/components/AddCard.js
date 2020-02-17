@@ -47,7 +47,7 @@ class Add extends Component {
                         value={this.state.ingredient}
                         name="ingredient"
                         onChange={this.handleInputChange} />
-                        <label for="newIngredient">Add an ingredient</label>
+                        <label htmlFor="newIngredient">Add an ingredient</label>
                     </div>
                 </div>
                 <div className="row">
@@ -56,7 +56,7 @@ class Add extends Component {
                         value={this.state.asin1}
                         name="asin1"
                         onChange={this.handleInputChange} />
-                        <label for="ASIN1">ASIN 1</label>
+                        <label htmlFor="ASIN1">ASIN 1</label>
                     </div>
                 </div>
                 <div className="row">
@@ -65,7 +65,7 @@ class Add extends Component {
                         value={this.state.asin2}
                         name="asin2"
                         onChange={this.handleInputChange} />
-                        <label for="ASIN2">ASIN 2</label>
+                        <label htmlFor="ASIN2">ASIN 2</label>
                     </div>
                 </div>
                 <div className="row">
@@ -74,7 +74,7 @@ class Add extends Component {
                         value={this.state.asin3}
                         name="asin3"
                         onChange={this.handleInputChange} />
-                        <label for="ASIN3">ASIN 3</label>
+                        <label htmlFor="ASIN3">ASIN 3</label>
                     </div>
                 </div>
                 <div className="row">
@@ -83,7 +83,7 @@ class Add extends Component {
                         value={this.state.asin4}
                         name="asin4"
                         onChange={this.handleInputChange} />
-                        <label for="ASIN4">ASIN 4</label>
+                        <label htmlFor="ASIN4">ASIN 4</label>
                     </div>
                     <div className="row">
                         <button className="btn btn-primary" onClick={this.handleFormSubmit}>

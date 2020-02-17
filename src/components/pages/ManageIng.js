@@ -1,5 +1,5 @@
 import React from 'react';
-import Add from '../AddCart';
+import Add from '../AddCard';
 import Update from '../UpdateCard';
 
 function ManageI() {
