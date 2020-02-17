@@ -3,9 +3,7 @@ import BrandCard from "../BrandCard"
 
 function BrandRec() {
     return (
-        <div className="advertisment">
-            <BrandCard />
-        </div>
+        <BrandCard />
     )
 }
 

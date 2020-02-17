@@ -100,6 +100,7 @@ class Update extends Component {
 
                     </div>
                 </div>
+
                     <div className="row">
                         <div className="input-field col s12" >
                             <input id="ASIN1" type="text"
@@ -140,6 +141,12 @@ class Update extends Component {
                             Update Ingredient
                         </button>
                     </div>
+            </div> 
+        </div>
+        )
+    }
+}
+
 
                     </div>
                 </div>
