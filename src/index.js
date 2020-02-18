@@ -7,8 +7,6 @@ import BrandRec from '../src/components/pages/BrandRec'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-ReactDOM.render(<BrandRec />, document.getElementById('amzn'));
-
 
 
 // If you want your app to work offline and load faster, you can change
