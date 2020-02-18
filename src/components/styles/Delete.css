@@ -1,0 +1,12 @@
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    border: solid black;
+    padding: 20px;
+    margin: 0%;
+    align-items: center;
+}
+
+h3{
+    margin:0%;
+}
