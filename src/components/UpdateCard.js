@@ -146,12 +146,5 @@ class Update extends Component {
         )
     }
 }
-
-
-                    </div>
-                </div>
-                )
-            }
-        }
         
 export default Update;
