@@ -172,6 +172,5 @@ class Update extends Component {
         )
     }
 }
-
         
 export default Update;

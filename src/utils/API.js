@@ -1,6 +1,6 @@
 import axios from "axios";
 const URL = "http://localhost:8080"
-// const URL = "https://seefood-api.herokuapp.com"
+// const URL = "https://seefoodar-api.herokuapp.com/"
 
 const API = {
     getIngredients: ()=>{
