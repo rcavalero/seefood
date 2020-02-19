@@ -2,9 +2,10 @@ import React from 'react';
 import './styles/brandrec.css'
 
 
-function BrandCard() {
+function BrandCard(props) {
   return (
     <div className="container recontainer">
+      <h1 className="center-align">Brand Recommendation</h1>
       <div className="row recrow">
         <div className="col s12 m4">
         <div className="card">
@@ -12,61 +13,12 @@ function BrandCard() {
               <img src="https://res.cloudinary.com/diad1aa5z/image/upload/v1582143170/Image_from_iOS_ctvefm.jpg" />
             </div>
             <div className="card-content">
-              <h3>BRAND NAME</h3>
+              <h4>BRAND NAME</h4>
               <hr />
-              <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
+            <h5>Price: (est)</h5>
             </div>
             <div className="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-        <div className="col s12 m4">
-          <div className="card">
-            <div className="card-image">
-              <img src="https://res.cloudinary.com/diad1aa5z/image/upload/v1582143170/Image_from_iOS_ctvefm.jpg" />
-            </div>
-            <div className="card-content">
-              <h3>BRAND NAME</h3>
-              <hr />
-              <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div className="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-        <div className="col s12 m4">
-          <div className="card">
-            <div className="card-image">
-              <img src="https://res.cloudinary.com/diad1aa5z/image/upload/v1582143170/Image_from_iOS_ctvefm.jpg" />
-            </div>
-            <div className="card-content">
-              <h3>BRAND NAME</h3>
-              <hr />
-              <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div className="card-action">
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
-        <div className="col s12 m4">
-          <div className="card">
-            <div className="card-image">
-              <img src="https://res.cloudinary.com/diad1aa5z/image/upload/v1582143170/Image_from_iOS_ctvefm.jpg" />
-            </div>
-            <div className="card-content">
-              <h3>BRAND NAME</h3>
-              <hr />
-              <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div className="card-action">
-              <a href="#">This is a link</a>
+              <a href="#">Shop on Amazon</a>
             </div>
           </div>
         </div>
