@@ -10,8 +10,13 @@ class AddRec extends Component {
 
     state = {
         ingredients: [],
-        name: "",
-        id: ""
+        newRec: {
+            brand: "",
+            url: "",
+            image: "",
+            price: "",
+            IngredientId: 0
+        },
     }
 
     componentDidMount() {
@@ -21,6 +26,17 @@ class AddRec extends Component {
             .catch(err => console.log(err));
     }
 
+    handleIngredientSelection = event => {
+
+        this.setState({
+            newRec: {
+                ...this.state.newRec,
+                IngredientId: parseInt(event.target.value)
+            }
+        });
+    }
+
+
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
         const value = event.target.value;
@@ -28,7 +44,25 @@ class AddRec extends Component {
 
         // Updating the input's state
         this.setState({
-            [name]: value
+            newRec: {
+                ...this.state.newRec,
+
+                [name]: value
+            }
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        API.addRecommendation(this.state.newRec);
+        this.setState({
+            newRec: {
+                brand: "",
+                url: "",
+                image: "",
+                price: "",
+                IngredientId: 0
+            }
         });
     };
 
@@ -38,34 +72,43 @@ class AddRec extends Component {
                 <h2>Add Brand Recommendation</h2>
                 <div className="row inputbox">
                     <div className="input-field col s12">
-                        <select className="browser-default">
-                            <option value="" disabled selected>Select an Ingredient</option>
+                        <select className="browser-default" defaultValue={"DEFAULT"} onChange={this.handleIngredientSelection}>
+                            <option value="DEFAULT" disabled>Select an Ingredient</option>
                             {this.state.ingredients.map(ing => (
-                                <option value={ing.name}> {ing.name} </option>
+                                <option value={ing.id} key={ing.id}>{ing.name}</option>
                             ))}
                         </select>
                     </div>
-
                     <div className="input-field col s12" >
-                        <input id="BrandName1" type="text" />
-                        <label htmlFor="BrandName1">Brand Name 1</label>
+                        <label htmlFor="BrandName">Brand Name</label>
+                        <input
+                            value={this.state.newRec.brand}
+                            name="brand"
+                            onChange={this.handleInputChange}
+                            id="BrandName"
+                            type="text" />
                     </div>
-
-                    {/* <button id="upload_widget" class="cloudinary-button">Upload files</button> */}
-                    
                     <Upload />
                     <div className="input-field col s12" >
-                        <input id="Price1" type="number" />
-                        <label htmlFor="Prife1">Price</label>
+                        <label htmlFor="Price">Price</label>
+                        <input
+                            value={this.state.newRec.price}
+                            name="price"
+                            onChange={this.handleInputChange}
+                            id="Price"
+                            type="number" />
                     </div>
-
                     <div className="input-field col s12" >
-                        <input id="Url1" type="url" />
-                        <label htmlFor="Url1">Link to Amazon Product</label>
+                        <label htmlFor="Url">Link to Amazon Product</label>
+                        <input
+                            value={this.state.newRec.url}
+                            name="url"
+                            onChange={this.handleInputChange}
+                            id="Url"
+                            type="url" />
                     </div>
-
                     <div className="input-field col s12" >
-                        <button className="btn btn-primary" >
+                        <button className="btn btn-primary" onClick={this.handleFormSubmit} >
                             Add Recommendation
                     </button>
                     </div>
