@@ -34,6 +34,11 @@ class Navbar extends Component {
                                 Brand Recommendation
                         </Link>
                         </li>
+                        <li>
+                            <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link"}>
+                                Recipe
+                        </Link>
+                        </li>
                     </ul>
                 </div>
                 <ul className="sidenav teal darken-3" id="mobile-demo">
@@ -55,6 +60,11 @@ class Navbar extends Component {
                     <li>
                         <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link"}>
                             Brand Recommendation
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link"}>
+                            Recipe
                         </Link>
                     </li>
                 </ul>
