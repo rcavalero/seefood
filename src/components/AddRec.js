@@ -3,7 +3,7 @@ import API from "../utils/API"
 // import './styles/AddCard.css'
 // Import Materialize
 import M from "materialize-css";
-// import Upload from './Upload'
+import Upload from './Upload'
 
 
 class AddRec extends Component {
@@ -68,7 +68,7 @@ class AddRec extends Component {
                 <label htmlFor="BrandName1">Brand Name 1</label>
             </div>
             {/* <button id="upload_widget" class="cloudinary-button">Upload files</button> */}
-                {/* <Upload /> */}
+                <Upload />
             <div className="input-field col s12" >
                 <input id="Price1" type="number" />
                 <label htmlFor="Prife1">Price</label>
