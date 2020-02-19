@@ -19,7 +19,7 @@ function About() {
                     <hr />
                     <h2>Customer Quotes</h2>
                     <p> “When I am building my grocery list to buy the ingredients in a recipe book I do not feel confident
-                    to buys some of the products. If there was some way to visualize the product and its density I would
+                    to buy some of the products. If there was some way to visualize the product and its density I would
                     feel better about creating a dish with unfamiliar ingredients. For example when I was making a
                     korean recipe the ingredients asked for products I have never purchased before. Instead of searching
                     and looking through images it would be great to easily visualize it so I can find it at the store.”</p>
