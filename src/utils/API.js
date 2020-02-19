@@ -12,6 +12,9 @@ const API = {
     addIngredient: (newIngredient)=>{
         return axios.post(`${URL}/api/ingredients`,newIngredient);
     },
+    addRecommendation: (newRecommendation)=>{
+        return axios.post(`${URL}/api/recommendation`,newRecommendation);
+    },
     updateIngredient: (id, updatedIngredient)=>{
         return axios.put(`${URL}/api/ingredients/${id}`,updatedIngredient);
     },
