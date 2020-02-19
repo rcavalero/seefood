@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav>
-            <div className="nav-wrapper">
+            <div className="nav-wrapper teal darken-4">
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
                     <li>
                         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
@@ -30,7 +30,7 @@ function Navbar() {
                     </li>
                 </ul>
             </div>
-            <ul className="sidenav" id="mobile-demo">
+            <ul className="sidenav teal darken-3" id="mobile-demo">
                 <li><Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
                     Home
                         </Link></li>
