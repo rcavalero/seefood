@@ -17,8 +17,8 @@ class AddRec extends Component {
             price: "",
             IngredientId: 0
         },
-        name: "",
-        id: ""
+        // name: "",
+        // id: ""
     }
 
     componentDidMount() {
@@ -32,22 +32,22 @@ class AddRec extends Component {
         // const value = event.target.value;
         // this.setState({ name: value })
 
-        const temp = this.state.ingredients;
-        let tempId = 0;
+        // const temp = this.state.ingredients;
+        // let tempId = 0;
 
-        temp.forEach((item) => {
-            // console.log(item)
-            if (item.name === event.target.value) {
-                tempId = item.id;
+        // temp.forEach((item) => {
+        //     // console.log(item)
+        //     if (item.name === event.target.value) {
+        //         tempId = item.id;
                 this.setState({
                     newRec: {
                         ...this.state.newRec,
-                        IngredientId: tempId
+                        IngredientId: parseInt(event.target.value)
                     }
                 });
             }
-        })
-    }
+        // })
+    // }
 
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
@@ -109,7 +109,7 @@ class AddRec extends Component {
                     <datalist id="ingredients"> */}
                             <option value="DEFAULT" disabled>Select an Ingredient</option>
                             {this.state.ingredients.map(ing => (
-                                <option value={ing.name} key={ing.id}>{ing.name}</option>
+                                <option value={ing.id} key={ing.id}>{ing.name}</option>
                             ))}
                             {/* </datalist> */}
 
