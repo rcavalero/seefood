@@ -33,7 +33,7 @@ class AddIng extends Component {
         return (
             <div className="container">
                 <h2>New Ingredient</h2>
-                <div className="row">
+                <div className="row inputbox">
                     <div className="input-field col s12">
                         <input id="newIngredient" type="text" name="name" value={this.state.name}  onChange={this.handleInputChange}/>
                         <label htmlFor="newIngredient">Add an ingredient</label>

@@ -13,7 +13,7 @@ function ManageI() {
       <AddRec />
       <div className="container" >
         <h2>Delete Ingredients</h2>
-        <div className="row">
+        <div className="row inputbox">
                 <div className="input-field col s12">
                         <select>
                             <option value="" disabled selected>Choose your option</option>
