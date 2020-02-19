@@ -17,8 +17,6 @@ class AddRec extends Component {
             price: "",
             IngredientId: 0
         },
-        // name: "",
-        // id: ""
     }
 
     componentDidMount() {
@@ -29,25 +27,15 @@ class AddRec extends Component {
     }
 
     handleIngredientSelection = event => {
-        // const value = event.target.value;
-        // this.setState({ name: value })
 
-        // const temp = this.state.ingredients;
-        // let tempId = 0;
-
-        // temp.forEach((item) => {
-        //     // console.log(item)
-        //     if (item.name === event.target.value) {
-        //         tempId = item.id;
-                this.setState({
-                    newRec: {
-                        ...this.state.newRec,
-                        IngredientId: parseInt(event.target.value)
-                    }
-                });
+        this.setState({
+            newRec: {
+                ...this.state.newRec,
+                IngredientId: parseInt(event.target.value)
             }
-        // })
-    // }
+        });
+    }
+
 
     handleInputChange = event => {
         // Getting the value and name of the input which triggered the change
@@ -59,19 +47,14 @@ class AddRec extends Component {
             newRec: {
                 ...this.state.newRec,
 
-            [name]: value}
+                [name]: value
+            }
         });
     };
 
     handleFormSubmit = event => {
         event.preventDefault();
-
-
         API.addRecommendation(this.state.newRec);
-        // console.log("state");
-
-        // console.log(this.state);
-
         this.setState({
             newRec: {
                 brand: "",
@@ -79,17 +62,9 @@ class AddRec extends Component {
                 image: "",
                 price: "",
                 IngredientId: 0
-                }
-});
+            }
+        });
     };
-
-    // RunAPI(){
-    //     API.getIngredients()
-    //     .then(res => this.setState({ ingredients: res.data }))
-    //     .then(M.AutoInit())
-    //     .catch(err => console.log(err));
-    // }  
-
 
     render() {
         return (
@@ -98,23 +73,11 @@ class AddRec extends Component {
                 <div className="row inputbox">
                     <div className="input-field col s12">
                         <select className="browser-default" defaultValue={"DEFAULT"} onChange={this.handleIngredientSelection}>
-                            {/* <input
-                        value={this.state.ingredients.name}
-                        onChange={this.handleInputChange}
-                        name={this.state.ingredients.name}
-                        list="ingredients"
-                        type="text"
-                        id={this.state.ingredients.id}
-                    />
-                    <datalist id="ingredients"> */}
                             <option value="DEFAULT" disabled>Select an Ingredient</option>
                             {this.state.ingredients.map(ing => (
                                 <option value={ing.id} key={ing.id}>{ing.name}</option>
                             ))}
-                            {/* </datalist> */}
-
                         </select>
-                        {/* <label onChange = {this.RunAPI}>Select an ingredient</label> */}
                     </div>
                     <div className="input-field col s12" >
                         <label htmlFor="BrandName">Brand Name</label>
@@ -125,8 +88,6 @@ class AddRec extends Component {
                             id="BrandName"
                             type="text" />
                     </div>
-
-                    {/* <button id="upload_widget" class="cloudinary-button">Upload files</button> */}
                     <Upload />
                     <div className="input-field col s12" >
                         <label htmlFor="Price">Price</label>
