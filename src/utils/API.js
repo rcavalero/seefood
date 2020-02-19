@@ -15,6 +15,9 @@ const API = {
     getRecommendations: ()=>{
         return axios.get(`${URL}/api/recommendations`);
     },
+    getIngredientRecs: (id)=>{
+        return axios.get(`${URL}/api/recommendations/${id}`);
+    },
     addRecommendation: (newRecommendation)=>{
         return axios.post(`${URL}/api/recommendation`,newRecommendation);
     },
