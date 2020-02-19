@@ -10,6 +10,7 @@ const API = {
         return axios.get(`${URL}/api/ingredients/${id}`)
     },
     addIngredient: (newIngredient)=>{
+        console.log(newIngredient)
         return axios.post(`${URL}/api/ingredients`,newIngredient);
     },
     addRecommendation: (newRecommendation)=>{
