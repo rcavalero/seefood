@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import API from "../utils/API"
 import M from "materialize-css";
 import Upload from './Upload'
@@ -7,9 +7,20 @@ import Upload from './Upload'
 
 
 // NEED TO ADD COMPONENT DID MOUNT FUNCTIONALITY
+//     componentDidMount() {
+//         API.getIngredients()
+//             .then(res => this.setState({ ingredients: res.data }))
+//             .then(M.AutoInit())
+//             .catch(err => console.log(err));
+//     }
 
 function AddRec(props) {
-
+    useEffect(() => {
+        if (props.update) {
+            M.AutoInit();
+        }
+    }, [props.update]);
+    
     return (
         <div className="container">
             <h2>Add Brand Recommendation</h2>
@@ -94,12 +105,7 @@ function AddRec(props) {
 //         },
 //     }
 
-//     componentDidMount() {
-//         API.getIngredients()
-//             .then(res => this.setState({ ingredients: res.data }))
-//             .then(M.AutoInit())
-//             .catch(err => console.log(err));
-//     }
+
 
 //     handleIngredientSelection = event => {
 

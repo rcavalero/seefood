@@ -1,3 +1,4 @@
 .inputbox{
-    border: solid black;
+    border: solid 1px grey;
+    background-color: white;
 }

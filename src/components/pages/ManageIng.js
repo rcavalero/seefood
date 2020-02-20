@@ -18,7 +18,21 @@ class ManageIng extends Component {
             url: "",
             price: "",
             ingredientId: ""
-        }
+        },
+        update: false
+    }
+
+
+
+    // ON PAGE LOAD
+    //Grab all the existing ingredients from the database and adding them to the "ingredients[]"
+    componentDidMount() {
+
+        API.getIngredients()
+            .then(res => this.setState({ 
+                ingredients: res.data 
+            }))
+            .catch(err => console.log(err));
     }
 
     // The following functions are for "AddCard.js"
@@ -39,8 +53,30 @@ class ManageIng extends Component {
     handleSubmitIngredient = event => {
 
         event.preventDefault();
-        API.addIngredient(this.state.ingredient);
+        let currIng = [...this.state.ingredients];
+        
+        if(this.state.ingredient.name !== ""){
+            currIng.push(this.state.ingredient.name);
+        }
+
+        API.addIngredient(this.state.ingredient)
+            .then(() => {
+                this.getIngredients();
+            })
+            .catch(err => console.log(err));
     };
+
+    // getIngredients = () => {
+    //     API.getIngredients()
+    //         .then((res) => {
+    //             // pass prop to child that will cause it to update and run m.autoinit function
+    //             this.setState({
+    //                 ingredients: res.data,
+    //                 update: true
+    //             });
+    //         })
+    //         .catch(err => console.log(err));
+    // }
 
 
     // The following functions are for "AddRec.js"
@@ -55,7 +91,7 @@ class ManageIng extends Component {
     };
 
     handleAddRecommendation = event => {
-        
+
         // Getting the value and name of the input which triggered the change
         const value = event.target.value;
         const name = event.target.name;
@@ -101,22 +137,23 @@ class ManageIng extends Component {
                 <br />
 
                 <Add
-                    name = {this.state.name}
-                    handleAddIngredient = {this.handleAddIngredient}
-                    handleSubmitIngredient = {this.handleSubmitIngredient}
+                    name={this.state.name}
+                    handleAddIngredient={this.handleAddIngredient}
+                    handleSubmitIngredient={this.handleSubmitIngredient}
                 />
 
-                <AddRec 
-                    ingredients = {this.state.ingredients}
-                    newRec = {this.state.newRec}
-                    handleIngredientSelection = {this.state.handleIngredientSelection}
-                    handleAddRecommendation = {this.state.handleAddRecommendation}
-                    handleSubmitRecommendation = {this.state.handleSubmitRecommendation}
+                <AddRec
+                    ingredients={this.state.ingredients}
+                    newRec={this.state.newRec}
+                    handleIngredientSelection={this.state.handleIngredientSelection}
+                    handleAddRecommendation={this.state.handleAddRecommendation}
+                    handleSubmitRecommendation={this.state.handleSubmitRecommendation}
+                    update={this.state.update}
                 />
 
                 <Delete
-                    handleDeleteRecommendation = {this.state.handleDeleteRecommendation}
-                    handleDeleteIngredient = {this.state.handleDeleteIngredient}
+                    handleDeleteRecommendation={this.state.handleDeleteRecommendation}
+                    handleDeleteIngredient={this.state.handleDeleteIngredient}
                 />
             </div>
         );

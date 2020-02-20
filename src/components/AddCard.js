@@ -9,14 +9,14 @@ function AddIng(props) {
             
             <h2>New Ingredient</h2>
             
-            <div className="row inputbox">  
+            <div className="row inputbox z-depth-4">  
                 <div className="input-field col s12">
                     
                     <input id="newIngredient" type="text" name="name" value={props.name} onChange={props.handleAddIngredient} />
                     
                     <label htmlFor="newIngredient">Add an ingredient</label>
                     
-                    <button className="btn btn-primary" onClick={props.handleSubmitIngredient}>
+                    <button className="btn btn-primary red accent-2" onClick={props.handleSubmitIngredient}>
                         Add Ingredient
                     </button>
                 </div>
