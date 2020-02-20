@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import M from "materialize-css";
+import './styles/Navbar.css'
 
 class Navbar extends Component {
 
@@ -12,19 +13,17 @@ class Navbar extends Component {
         return (
             <nav>
                 <ul id="dropdown1" className="dropdown-content">
-                    <li> <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link"}>
+                    <li> <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link1"}>
                         Hamburger
                         </Link></li>
                     <li><a href="#!">two</a></li>
-                    <li className="divider"></li>
                     <li><a href="#!">three</a></li>
                 </ul>
                 <ul id="dropdown2" className="dropdown-content">
-                    <li> <Link to="/manage" className={window.location.pathname === "manage" ? "nav-link active" : "nav-link"}>
+                    <li> <Link to="/manage" className={window.location.pathname === "manage" ? "nav-link active" : "nav-link1"}>
                         Manage
                         </Link></li>
-                    <li className="divider"></li>
-                    <li> <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link"}>
+                    <li> <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link1"}>
                         Brand
                         </Link></li>
                 </ul>
@@ -49,7 +48,7 @@ class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
-                <ul className="sidenav teal darken-4" id="mobile-demo">
+                <ul className="sidenav teal darken-3" id="mobile-demo">
                     <li>
                         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
                             Home
@@ -60,26 +59,32 @@ class Navbar extends Component {
                             About
                         </Link>
                     </li>
+                    <li className="divider"></li>
                     <li>
-                        <Link to="/manage" className={window.location.pathname === "manage" ? "nav-link active" : "nav-link"}>
-                            Manage Ingredients
-                        </Link>
+                        <a className="dropdown-trigger" href="#!" data-target="dropdown3">Recipes<i className="material-icons right">arrow_drop_down</i></a>
                     </li>
                     <li>
-                        <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link"}>
-                            Brand Recommendation
-                        </Link>
+                        <a className="dropdown-trigger" href="#!" data-target="dropdown4">Internal<i className="material-icons right">arrow_drop_down</i></a>
                     </li>
-                    <li>
-                        <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link"}>
-                            Recipe
-                        </Link>
-                    </li>
+                </ul>
+                <ul id="dropdown3" className="dropdown-content">
+                    <li> <Link to="/recipe" className={window.location.pathname === "recipe" ? "nav-link active" : "nav-link1"}>
+                        Hamburger
+                        </Link></li>
+                    <li><a href="#!">two</a></li>
+                    <li><a href="#!">three</a></li>
+                </ul>
+                <ul id="dropdown4" className="dropdown-content">
+                    <li> <Link to="/manage" className={window.location.pathname === "manage" ? "nav-link active" : "nav-link1"}>
+                        Manage
+                        </Link></li>
+                    <li> <Link to="/brandrec" className={window.location.pathname === "brandrec" ? "nav-link active" : "nav-link1"}>
+                        Brand
+                        </Link></li>
                 </ul>
             </nav>
         )
     }
 }
-
 
 export default Navbar;

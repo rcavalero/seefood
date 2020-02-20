@@ -25,7 +25,7 @@
 }
 
 .recipetitle{
-    font-size: 8rem;
+    font-size: 7rem;
     margin-top: 10%;
 }
 
@@ -34,6 +34,20 @@ p{
 }
 
 
+@media only screen and (max-width: 1000px) {
+    .arbox{
+        width:100px;
+    }
+    p{
+        font-size:20px
+    }
+
+    .recipetitle{
+        font-size: 5rem;
+    }
+
+}
+
 @media only screen and (max-width: 500px) {
     .arbox{
         width:100px;
@@ -41,7 +55,9 @@ p{
     p{
         font-size:20px
     }
-    .test{
-        margin:0%;
+
+    .recipetitle{
+        font-size: 4rem;
     }
+
 }
