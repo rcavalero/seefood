@@ -2,6 +2,7 @@ import React, { useState, useEffect, Component } from 'react';
 import API from "../../utils/API"
 import Add from '../AddCard';
 import AddRec from '../AddRec'
+import M from "materialize-css";
 import Delete from '../DeleteCard'
 
 
@@ -17,23 +18,27 @@ class ManageIng extends Component {
             brand: "",
             url: "",
             price: "",
-            ingredientId: ""
-        },
-        update: false
+            IngredientId: ""
+        }
     }
-
 
 
     // ON PAGE LOAD
     //Grab all the existing ingredients from the database and adding them to the "ingredients[]"
-    componentDidMount() {
+    getIngs = () =>{
 
         API.getIngredients()
             .then(res => this.setState({ 
                 ingredients: res.data 
             }))
+            .then(M.AutoInit())
             .catch(err => console.log(err));
     }
+
+    componentDidMount() {
+        this.getIngs();
+    }
+
 
     // The following functions are for "AddCard.js"
     handleAddIngredient = event => {
@@ -53,30 +58,14 @@ class ManageIng extends Component {
     handleSubmitIngredient = event => {
 
         event.preventDefault();
-        // let currIng = [...this.state.ingredients];
-        
-        // if(this.state.ingredient.name !== ""){
-        //     currIng.push(this.state.ingredient.name);
-        // }
-        console.log(this.state.ingredient)
-        API.addIngredient(this.state.ingredient);
-            // .then(() => {
-            //     this.getIngredients();
-            // })
-            // .catch(err => console.log(err));
-    };
 
-    // getIngredients = () => {
-    //     API.getIngredients()
-    //         .then((res) => {
-    //             // pass prop to child that will cause it to update and run m.autoinit function
-    //             this.setState({
-    //                 ingredients: res.data,
-    //                 update: true
-    //             });
-    //         })
-    //         .catch(err => console.log(err));
-    // }
+        console.log(this.state.ingredient);
+        API.addIngredient(this.state.ingredient)
+            .then(() => {
+                this.getIngs();
+            })
+            .catch(err => console.log(err));
+    };
 
 
     // The following functions are for "AddRec.js"
@@ -85,7 +74,7 @@ class ManageIng extends Component {
         this.setState({
             newRec: {
                 ...this.state.newRec,
-                ingredientId: parseInt(event.target.value)
+                IngredientId: parseInt(event.target.value)
             }
         });
     };
@@ -109,6 +98,7 @@ class ManageIng extends Component {
     handleSubmitRecommendation = event => {
         event.preventDefault();
         API.addRecommendation(this.state.newRec);
+        
         this.setState({
             newRec: {
                 brand: "",
@@ -145,10 +135,10 @@ class ManageIng extends Component {
                 <AddRec
                     ingredients={this.state.ingredients}
                     newRec={this.state.newRec}
-                    handleIngredientSelection={this.state.handleIngredientSelection}
-                    handleAddRecommendation={this.state.handleAddRecommendation}
-                    handleSubmitRecommendation={this.state.handleSubmitRecommendation}
-                    update={this.state.update}
+                    handleIngredientSelection={this.handleIngredientSelection}
+                    handleAddRecommendation={this.handleAddRecommendation}
+                    handleSubmitRecommendation={this.handleSubmitRecommendation}
+                    update={this.update}
                 />
 
                 {/* <Delete
