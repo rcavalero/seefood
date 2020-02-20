@@ -39,7 +39,7 @@ function AddRec(props) {
                 
 
                 {/* Image for Rec */}
-                <Upload />  
+                <Upload handleImageUpload={props.handleImageUpload}/>  
 
 
                 {/* Price for Rec */}
