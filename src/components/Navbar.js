@@ -49,7 +49,7 @@ class Navbar extends Component {
                         </li>
                     </ul>
                 </div>
-                <ul className="sidenav teal darken-3" id="mobile-demo">
+                <ul className="sidenav teal darken-4" id="mobile-demo">
                     <li>
                         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
                             Home
