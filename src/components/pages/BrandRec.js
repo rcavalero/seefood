@@ -1,16 +1,32 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import BrandCard from "../BrandCard"
+import API from '/Users/sarkw/seefood/src/utils/API'
 
 
 class BrandRec extends Component {
 
-    componentDidMount(){
-        
+    state = {
+        brand: "",
+        url: "",
+        image: "",
+        price: "",
+        IngredientId: 0,
+        recommendations: []
     }
 
-    render(){
+    componentDidMount() {
+        API.getRecommendations().then(res => this.setState({ recommendations: res.data }))
+            .catch(err => console.log(err));
+    }
+
+    render() {
         return (
-            <BrandCard />
+            <BrandCard
+            brand={this.state.brand}
+            url={this.state.url}
+            image={this.state.image}
+            price={this.state.price}
+             />
         )
     }
 }

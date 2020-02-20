@@ -16,7 +16,7 @@ function AddIng(props) {
                     
                     <label htmlFor="newIngredient">Add an ingredient</label>
                     
-                    <button className="btn btn-primary" onClick={props.handleSubmitIngredient}>
+                    <button className="btn btn-primary red accent-2" onClick={props.handleSubmitIngredient}>
                         Add Ingredient
                     </button>
                 </div>
