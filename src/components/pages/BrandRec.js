@@ -1,14 +1,18 @@
-import React from "react";
+import React, {Component} from "react";
 import BrandCard from "../BrandCard"
 
 
-class 
+class BrandRec extends Component {
 
-function BrandRec() {
-    return (
-        <BrandCard />
-    )
+    componentDidMount(){
+        
+    }
+
+    render(){
+        return (
+            <BrandCard />
+        )
+    }
 }
-
 
 export default BrandRec;
