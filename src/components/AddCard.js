@@ -9,7 +9,7 @@ function AddIng(props) {
             
             <h2>New Ingredient</h2>
             
-            <div className="row inputbox">  
+            <div className="row inputbox z-depth-4">  
                 <div className="input-field col s12">
                     
                     <input id="newIngredient" type="text" name="name" value={props.name} onChange={props.handleAddIngredient} />

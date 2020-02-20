@@ -70,7 +70,7 @@ class AddRec extends Component {
         return (
             <div className="container">
                 <h2>Add Brand Recommendation</h2>
-                <div className="row inputbox">
+                <div className="row inputbox z-depth-4">
                     <div className="input-field col s12">
                         <select className="browser-default" defaultValue={"DEFAULT"} onChange={this.handleIngredientSelection}>
                             <option value="DEFAULT" disabled>Select an Ingredient</option>

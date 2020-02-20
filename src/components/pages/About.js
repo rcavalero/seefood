@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/About.css'
 
 
 function About() {
@@ -12,9 +13,8 @@ function About() {
                         ingredients in a 3D form using AR to help them understand what the product looks like in its full
                         form before they build their grocery list or buy the ingredients.
                     </p>
-                    <p>Users can also see our brand recommendations for each ingredient if he or she clicks on the 3d
-                     model. The user can also build their Amazon cart by click on the products recommended on our page.
-                     The people at SEEFOOD wants our users to have delightful experience but also to create an experience
+                    <p>Users can also access our brand recommendations for each ingredient if he or she clicks on the 3d
+                     model.  The people at SEEFOOD wants our users to have delightful experience but also create an experience
                     that is globally accessible to everyone.</p>
                     <hr />
                     <h2>Customer Quotes</h2>
@@ -40,14 +40,14 @@ function About() {
                             <img className="activator" src="https://avatars2.githubusercontent.com/u/57707960?s=460&v=4" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i
+                            <span className="card-title activator grey-text text-darken-4">Robert Cavalero<i
                                 className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <p className="aboutp"><a href="#">This is a link</a></p>
                         </div>
                         <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4">Card Title<i
                                 className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p className="aboutp">Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
                 </div>
@@ -57,14 +57,14 @@ function About() {
                             <img className="activator" src="https://avatars3.githubusercontent.com/u/57238930?s=460&v=4" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i
+                            <span className="card-title activator grey-text text-darken-4">Rafay Khawar<i
                                 className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <p className="aboutp"><a href="#">This is a link</a></p>
                         </div>
                         <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4">Card Title<i
                                 className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p className="aboutp">Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
                 </div>
@@ -75,14 +75,14 @@ function About() {
                                 src="https://avatars2.githubusercontent.com/u/54822096?s=400&u=b4cbf6c0f17a7a04af1f7af87703eab1c587063d&v=4" />
                         </div>
                         <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i
+                            <span className="card-title activator grey-text text-darken-4">Sarah Kwon<i
                                 className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <p className="aboutp"><a href="#">This is a link</a></p>
                         </div>
                         <div className="card-reveal">
                             <span className="card-title grey-text text-darken-4">Card Title<i
                                 className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            <p className="aboutp">Here is some more information about this product that is only revealed once clicked on.</p>
                         </div>
                     </div>
                 </div>
