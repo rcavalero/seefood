@@ -72,14 +72,13 @@ p {
 
 @media only screen and (max-width: 500px) {
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0%;
         padding-top: 150px;
-        padding-right: 5%;
     }
 
     .btn-large {
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 5px;
     }
 
@@ -91,18 +90,10 @@ p {
 
 @media only screen and (max-width: 350px) {
     .title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: 0%;
         padding-top: 150px;
-        padding-right: 5%;
     }
-
-    /* .btnbox {
-        bottom: 0;
-        padding-left: 10px;
-        padding-bottom: 500px;
-        position: absolute;
-    } */
 
     .btn-large {
         font-size: 2rem;
