@@ -141,10 +141,10 @@ class ManageIng extends Component {
                     update={this.update}
                 />
 
-                {/* <Delete
+                <Delete
                     handleDeleteRecommendation={this.state.handleDeleteRecommendation}
                     handleDeleteIngredient={this.state.handleDeleteIngredient}
-                /> */}
+                />
             </div>
         );
     }
