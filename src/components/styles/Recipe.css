@@ -1,3 +1,24 @@
 .box{
-    border: solid black
+    border: solid black;
+    /* width: 100%; */;
+    height: auto;
+}
+
+.recipecontainer{
+    width: 100%;
+}
+
+.row{
+    margin: 0%;
+}
+
+.arbox{
+    width:200px;
+}
+
+.test{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15%;
 }
