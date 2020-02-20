@@ -1,11 +1,12 @@
 body,
 html {
+    width: 100%;
     height: 100%;
 }
 
-.container {
+.home {
     /* The image used */
-    background-image: url("https://images.pexels.com/photos/1470166/pexels-photo-1470166.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-image: url("https://res.cloudinary.com/diad1aa5z/image/upload/v1581994760/brooke-lark-08bOYnH_r_E-unsplash_qsawmi.jpg");
 
     /* Full height and width */
     height: 100%;
@@ -19,42 +20,107 @@ html {
     position: relative;
 }
 
-h1 {
+.title {
     margin: 0%;
-    padding-top: 100px;
-    padding-right: 100px;
-    font-size: 8rem;
+    padding-top: 15%;
+    font-size: 12rem;
+    color: #492634;
+    font-weight: 900;
+}
+
+h1 {
+    color: #492634;
+    font-size: 6rem;
 }
 
 .btnbox {
     bottom: 0;
-    padding-left: 100px;
     padding-bottom: 100px;
     position: absolute;
 }
 
+
 .btn-large {
     font-size: 3.5rem;
-    margin: 5px;
+    margin: 8px;
 }
 
+p {
+    font-size: 20px;
+}
+
+
+@media only screen and (max-width: 1500px) {
+    .title {
+        font-size: 9rem;
+        margin: 0%;
+        padding-top: 100px;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        font-size: 7rem;
+        margin: 0%;
+        padding-top: 100px;
+        padding-right: 5%;
+    }
+}
+
+
+
 @media only screen and (max-width: 768px) {
-    h1{
+    .title {
         font-size: 5rem;
         margin: 0%;
-        padding-top: 50px;
-        padding-right: 10%;
+        padding-top: 100px;
+        padding-right: 5%;
     }
 
-    /* .btnbox {
-        bottom: 0;
-        padding-left: 10px;
-        padding-bottom: 500px;
-        position: absolute;
-    } */
-    
     .btn-large {
         font-size: 3.5rem;
         margin: 5px;
+    }
+
+    .home {
+        width: 100%;
+        background-position: 32%, 0%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title {
+        font-size: 3rem;
+        margin: 0%;
+        padding-top: 150px;
+    }
+
+    .btn-large {
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .home {
+        width: 100%;
+        background-position: 32%, 0%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-size: 2.5rem;
+        margin: 0%;
+        padding-top: 150px;
+    }
+
+    .btn-large {
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .home {
+        width: 100%;
+        background-position: 32%, 0%;
     }
 }

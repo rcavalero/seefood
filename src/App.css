@@ -2,6 +2,7 @@
     height: 100%;
 }
 
-.test{
-    height: 100%; 
+#widget{
+    /* border: solid black; */
+    height: 50%;
 }

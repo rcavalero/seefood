@@ -1,6 +1,5 @@
-body,
-html {
-    height: 100%;
-    background-color: rgb(204, 203, 207);
-  
+body {
+    /* font-family: 'Charmonman', cursive; */
+    font-family: 'Poiret One', cursive;
+    background-color: #F4F5F7;
 }
