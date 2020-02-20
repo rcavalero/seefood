@@ -17,6 +17,7 @@ class ManageIng extends Component {
         newRec: {
             brand: "",
             url: "",
+            image: "",
             price: "",
             IngredientId: ""
         }
@@ -110,7 +111,14 @@ class ManageIng extends Component {
         });
     }
 
-
+    handleImageUpload = imageUrl=>{
+        this.setState({
+            newRec:{
+                ...this.state.newRec,
+                image:imageUrl
+            }
+        })
+    }
     // The following functions are for "DeleteCard.js"
     handleDeleteRecommendation = event => {
 
@@ -139,11 +147,12 @@ class ManageIng extends Component {
                     handleAddRecommendation={this.handleAddRecommendation}
                     handleSubmitRecommendation={this.handleSubmitRecommendation}
                     update={this.update}
+                    handleImageUpload={this.handleImageUpload}
                 />
 
                 <Delete
-                    handleDeleteRecommendation={this.state.handleDeleteRecommendation}
                     handleDeleteIngredient={this.state.handleDeleteIngredient}
+                    handleDeleteRecommendation={this.state.handleDeleteRecommendation}
                 />
             </div>
         );

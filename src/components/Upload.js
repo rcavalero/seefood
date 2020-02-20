@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function Upload() {
+function Upload(props) {
 
     const [image, setImage] = useState('')
     const [loading, setLoading] = useState(false)
@@ -22,6 +22,7 @@ function Upload() {
         )
         const file = await res.json()
         console.log(file.secure_url)
+        props.handleImageUpload(file.secure_url)
         setImage(file.secure_url)
         setLoading(false)
     }
