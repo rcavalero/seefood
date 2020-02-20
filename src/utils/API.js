@@ -9,20 +9,17 @@ const API = {
     getOneIngredient: (id)=>{
         return axios.get(`${URL}/api/ingredient/${id}`)
     },
-    addIngredient: (newIngredient)=>{
-        return axios.post(`${URL}/api/ingredient`,newIngredient);
-    },
-    getRecommendations: ()=>{
-        return axios.get(`${URL}/api/recommendations`);
-    },
+    // getRecommendations: ()=>{
+    //     return axios.get(`${URL}/api/recommendations`);
+    // },
     getIngredientRecs: (id)=>{
         return axios.get(`${URL}/api/recommendations/${id}`);
     },
+    addIngredient: (newIngredient)=>{
+        return axios.post(`${URL}/api/ingredient`,newIngredient);
+    },
     addRecommendation: (newRecommendation)=>{
         return axios.post(`${URL}/api/recommendation`,newRecommendation);
-    },
-    updateIngredient: (id, updatedIngredient)=>{
-        return axios.put(`${URL}/api/ingredient/${id}`,updatedIngredient);
     },
     deleteIngredient: (id)=>{
         return axios.delete(`${URL}/api/ingredient/${id}`)
