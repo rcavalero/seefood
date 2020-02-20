@@ -50,6 +50,25 @@ p {
 }
 
 
+@media only screen and (max-width: 1500px) {
+    .title {
+        font-size: 9rem;
+        margin: 0%;
+        padding-top: 100px;
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .title {
+        font-size: 7rem;
+        margin: 0%;
+        padding-top: 100px;
+        padding-right: 5%;
+    }
+}
+
+
 
 @media only screen and (max-width: 768px) {
     .title {
