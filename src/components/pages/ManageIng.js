@@ -53,17 +53,17 @@ class ManageIng extends Component {
     handleSubmitIngredient = event => {
 
         event.preventDefault();
-        let currIng = [...this.state.ingredients];
+        // let currIng = [...this.state.ingredients];
         
-        if(this.state.ingredient.name !== ""){
-            currIng.push(this.state.ingredient.name);
-        }
-
-        API.addIngredient(this.state.ingredient)
-            .then(() => {
-                this.getIngredients();
-            })
-            .catch(err => console.log(err));
+        // if(this.state.ingredient.name !== ""){
+        //     currIng.push(this.state.ingredient.name);
+        // }
+        console.log(this.state.ingredient)
+        API.addIngredient(this.state.ingredient);
+            // .then(() => {
+            //     this.getIngredients();
+            // })
+            // .catch(err => console.log(err));
     };
 
     // getIngredients = () => {
@@ -151,10 +151,10 @@ class ManageIng extends Component {
                     update={this.state.update}
                 />
 
-                <Delete
+                {/* <Delete
                     handleDeleteRecommendation={this.state.handleDeleteRecommendation}
                     handleDeleteIngredient={this.state.handleDeleteIngredient}
-                />
+                /> */}
             </div>
         );
     }
