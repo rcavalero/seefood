@@ -108,7 +108,7 @@ class AddRec extends Component {
                             type="url" />
                     </div>
                     <div className="input-field col s12" >
-                        <button className="btn btn-primary" onClick={this.handleFormSubmit} >
+                        <button className="btn btn-primary red accent-2" onClick={this.handleFormSubmit} >
                             Add Recommendation
                     </button>
                     </div>
