@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import BrandCard from "../BrandCard"
-import API from '/Users/sarkw/seefood/src/utils/API'
+import API from "../../utils/API"
 
 
 class BrandRec extends Component {
@@ -15,7 +15,10 @@ class BrandRec extends Component {
     }
 
     componentDidMount() {
-        API.getRecommendations().then(res => this.setState({ recommendations: res.data }))
+        console.log(window.location.href)
+        //grad the id
+        //const = id
+        API.getRecommendations( ).then(res => this.setState({ recommendations: res.data }))
             .catch(err => console.log(err));
     }
 
