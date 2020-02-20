@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/brandrec.css'
+import './styles/BrandRec.css'
 
 
 function BrandCard(props) {
