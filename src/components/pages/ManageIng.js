@@ -4,31 +4,6 @@ import Add from '../AddCard';
 import AddRec from '../AddRec'
 import Delete from '../DeleteCard'
 
-// function ManageI() {
-//     return (
-//         <div>
-//             <h1 className="center-align">Manage Ingredients</h1>
-//             <br />
-//             <Add />
-//             <AddRec />
-//             <div className="container" >
-//                 <h2>Delete Ingredients</h2>
-//                 <div className="row inputbox">
-//                     <div className="input-field col s12">
-//                         <select>
-//                             <option value="" disabled selected>Choose your option</option>
-//                             <option value="1">Option 1</option>
-//                             <option value="2">Option 2</option>
-//                             <option value="3">Option 3</option>
-//                         </select>
-//                         <label>Materialize Select</label>
-//                     </div>
-//                     < Delete />
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
 
 class ManageIng extends Component {
 
@@ -67,7 +42,57 @@ class ManageIng extends Component {
         API.addIngredient(this.state.ingredient);
     };
 
+
     // The following functions are for "AddRec.js"
+    handleIngredientSelection = event => {
+
+        this.setState({
+            newRec: {
+                ...this.state.newRec,
+                ingredientId: parseInt(event.target.value)
+            }
+        });
+    };
+
+    handleAddRecommendation = event => {
+        
+        // Getting the value and name of the input which triggered the change
+        const value = event.target.value;
+        const name = event.target.name;
+
+        // Updating the input's state
+        this.setState({
+            newRec: {
+                ...this.state.newRec,
+
+                [name]: value
+            }
+        });
+    };
+
+    handleSubmitRecommendation = event => {
+        event.preventDefault();
+        API.addRecommendation(this.state.newRec);
+        this.setState({
+            newRec: {
+                brand: "",
+                url: "",
+                image: "",
+                price: "",
+                IngredientId: 0
+            }
+        });
+    }
+
+
+    // The following functions are for "DeleteCard.js"
+    handleDeleteRecommendation = event => {
+
+    }
+
+    handleDeleteIngredient = event => {
+
+    }
 
     render() {
         return (
@@ -76,32 +101,23 @@ class ManageIng extends Component {
                 <br />
 
                 <Add
-                    name={this.state.name}
-                    handleAddIngredient={this.handleAddIngredient}
-                    handleSubmitIngredient={this.handleSubmitIngredient}
+                    name = {this.state.name}
+                    handleAddIngredient = {this.handleAddIngredient}
+                    handleSubmitIngredient = {this.handleSubmitIngredient}
                 />
 
                 <AddRec 
-                    
+                    ingredients = {this.state.ingredients}
+                    newRec = {this.state.newRec}
+                    handleIngredientSelection = {this.state.handleIngredientSelection}
+                    handleAddRecommendation = {this.state.handleAddRecommendation}
+                    handleSubmitRecommendation = {this.state.handleSubmitRecommendation}
                 />
 
-                {/*<div className="container" >
-                    <h2>Delete Ingredients</h2>
-
-                    <div className="row inputbox">
-                        <div className="input-field col s12">
-                            <select>
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>
-                            <label>Materialize Select</label>
-                        </div>
-
-                        < Delete />
-                    </div>
-                </div> */}
+                <Delete
+                    handleDeleteRecommendation = {this.state.handleDeleteRecommendation}
+                    handleDeleteIngredient = {this.state.handleDeleteIngredient}
+                />
             </div>
         );
     }
